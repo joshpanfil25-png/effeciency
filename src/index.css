@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ───────────────────────────────────────────────────────────────────────────
+   Efficiency Media — design tokens (Lia's palette).
+   Teal primary, navy ink, warm-gray paper. Playfair Display headings + DM Sans.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+@layer base {
+  :root {
+    /* Brand */
+    --teal: 192 70% 32%;
+    --teal-light: 192 55% 45%;
+    --teal-dark: 192 75% 24%;
+    --navy: 210 50% 18%;
+    --warm-gray: 30 20% 96%;
+
+    /* shadcn semantic tokens mapped onto the brand */
+    --background: 0 0% 100%;
+    --foreground: 210 50% 18%; /* navy */
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 50% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 50% 18%;
+
+    --primary: 192 70% 32%; /* teal */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 20% 96%; /* warm gray */
+    --secondary-foreground: 210 50% 18%;
+
+    --muted: 30 20% 96%;
+    --muted-foreground: 210 16% 42%;
+
+    --accent: 192 55% 45%; /* teal-light */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 192 70% 32%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: 'ss01';
+    margin: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  /* Teal → navy gradient text, used in section headings across the site. */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      135deg,
+      hsl(var(--teal)) 0%,
+      hsl(var(--teal-light)) 55%,
+      hsl(var(--navy)) 100%
+    );
+  }
+
+  .bg-warm {
+    background-color: hsl(var(--warm-gray));
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   VERSION B — Lia's tokens, SCOPED.
+   These CSS variables share the SAME names as Version A's, so they MUST stay
+   scoped under .version-b-root. Version A reads :root values (untouched); any
+   element inside .version-b-root reads Lia's values below. Nothing here leaks.
+   Values copied verbatim from lia-export/src/index.css :root.
+   ─────────────────────────────────────────────────────────────────────────── */
+.version-b-root {
+  --background: 210 20% 98%;
+  --foreground: 210 30% 15%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 210 30% 15%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 210 30% 15%;
+
+  --primary: 192 70% 32%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 210 25% 95%;
+  --secondary-foreground: 210 30% 15%;
+
+  --muted: 210 20% 96%;
+  --muted-foreground: 210 10% 50%;
+
+  --accent: 192 70% 32%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 210 20% 90%;
+  --input: 210 20% 90%;
+  --ring: 192 70% 32%;
+
+  --radius: 0.75rem;
+
+  --navy: 210 50% 18%;
+  --navy-foreground: 0 0% 100%;
+  --teal: 192 70% 32%;
+  --teal-light: 192 60% 45%;
+  --teal-dark: 192 80% 22%;
+  --warm-gray: 30 10% 96%;
+
+  /* Establish Lia's base surface for the whole Version B page. */
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  min-height: 100vh;
+}
+
+/* Lia's container caps at 1400px (mine caps at 1200px). Reproduce hers, scoped
+   so Version A's container is unaffected. Padding comes from her markup's px-6. */
+.version-b-root .container {
+  max-width: none;
+}
+@media (min-width: 1400px) {
+  .version-b-root .container {
+    max-width: 1400px;
+  }
+}
