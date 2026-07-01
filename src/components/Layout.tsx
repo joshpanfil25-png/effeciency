@@ -8,12 +8,15 @@ import { useVersion } from '@/versionB/VersionContext'
 // Shared chrome for every route — Navbar + Footer, reused on the blog too.
 export default function Layout() {
   const { version } = useVersion()
-  const isHome = useLocation().pathname === '/'
+  const pathname = useLocation().pathname
+  const isHome = pathname === '/'
+  const isBlog = pathname === '/blog' || pathname.startsWith('/blog/')
 
-  // On the homepage in Version B, Lia's own Navbar/Footer render inside
-  // VersionBHome, so we suppress this site's chrome to avoid doubling it.
-  // Version A and every other route (incl. the blog) are unchanged.
-  if (isHome && version === 'B') {
+  // Suppress this site's chrome when the page supplies its own:
+  //  • Version B homepage (Lia's Navbar/Footer inside VersionBHome)
+  //  • the blog (Version B styled — its own Navbar/Footer)
+  // Version A homepage and all other routes keep the normal chrome.
+  if (isBlog || (isHome && version === 'B')) {
     return <Outlet />
   }
 

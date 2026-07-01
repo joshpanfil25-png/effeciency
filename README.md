@@ -19,6 +19,12 @@ npm run preview   # serve the production build
 `/blog` works immediately and shows an **empty state** until Sanity is wired up
 and the first post is published.
 
+> **The blog is styled to match Version B (Lia's design).** It renders inside
+> `.version-b-root`, reuses her Navbar + Footer + Card/Button, and uses her
+> Playfair/DM Sans + teal/navy tokens. Version A and the version toggle are
+> untouched. (This is "Version B only, for now" — a Version-A-styled blog can be
+> added later.)
+
 ---
 
 ## Architecture
@@ -26,36 +32,41 @@ and the first post is published.
 ```
 src/
   main.tsx                 BrowserRouter + QueryClientProvider + HelmetProvider
-  App.tsx                  routes — blog routes sit ABOVE the catch-all "*"
-  index.css                design tokens (teal/navy, --radius 0.75rem), fonts
+  App.tsx                  routes — blog routes (Version B) sit ABOVE catch-all "*"
+  index.css                A tokens in :root + Lia's tokens scoped .version-b-root
   components/
-    Layout.tsx             Navbar + <Outlet/> + Footer (reused on every route)
-    Navbar.tsx             + Blog nav link        ← only edit to existing chrome
-    Footer.tsx             + Blog footer link     ← only edit to existing chrome
-    ScrollToHash.tsx       smooth anchor scroll across routes
-    ui/                    shadcn/ui (button, card) — blog reuses these
-    sections/              Hero/About/Services/Team/Testimonials/Contact
-    blog/
-      PostCard.tsx         index/"more posts" card (uses <Card>)
-      PortableBody.tsx     Portable Text → Playfair headings, DM Sans, teal links
+    Layout.tsx             site chrome; renders bare <Outlet/> for /blog + B home
+    Navbar.tsx / Footer.tsx   Version A chrome (UNTOUCHED this task)
+    ui/                    shadcn/ui (button, card) — Version A
+    sections/              Version A: Hero/About/Services/Team/Testimonials/Contact
   pages/
-    Home.tsx               the marketing page
-    BlogIndex.tsx          /blog       — react-query grid + empty state
-    BlogPost.tsx           /blog/:slug — full post + SEO + "more posts"
+    Home.tsx               Version A marketing page
     NotFound.tsx           catch-all 404
+  versionB/                ← Lia's design (Version B)
+    VersionBHome.tsx       her homepage; hash-scroll for cross-route section links
+    components/            her Navbar (+alwaysSolid, +Blog link) / Footer / sections
+    components/ui/         her Card + Button (token-driven → inherit her tokens)
+    blog/
+      PostCard.tsx         Version B card (her <Card>, teal accents, Playfair title)
+      PortableBody.tsx     Portable Text → Playfair headings, DM Sans, teal links
+    pages/
+      BlogIndex.tsx        /blog       — .version-b-root, her Navbar/Footer, grid
+      BlogPost.tsx         /blog/:slug — full post + SEO + "more posts"
   lib/
-    sanity.ts              @sanity/client (reads VITE_SANITY_* env)
-    sanityImage.ts         @sanity/image-url urlForImage()
+    sanity.ts              @sanity/client (reads VITE_SANITY_* env)  ← shared
+    sanityImage.ts         @sanity/image-url urlForImage()           ← shared
     queries.ts             GROQ fetchers (getPosts / getPost / getMorePosts)
-  data/site.ts             nav links (incl. Blog), services, team, testimonials
-  types/post.ts            Post / PostCard TS types
+  types/post.ts            Post / PostCard TS types                  ← shared
 sanity-studio-schemas/     post + blockContent schema to drop into the Studio
 .env.example               VITE_SANITY_* template
 vercel.json                SPA rewrite so /blog/:slug deep-links work
 ```
 
-The blog is **additive** — the only edits to existing chrome are one nav item in
-`Navbar.tsx` and one link in `Footer.tsx` (both driven by `data/site.ts`).
+The Sanity **data layer** (`lib/sanity`, `lib/queries`, `lib/sanityImage`,
+`types/post`) is version-agnostic and shared. Only the blog **UI** lives under
+`src/versionB/`. The blog is **additive**: the only edits to existing chrome are
+in Version B's `Navbar.tsx` (Blog link + `alwaysSolid` prop for the blog) and
+`Footer.tsx` (cross-route section links), plus `Layout.tsx`/`App.tsx` wiring.
 
 ---
 

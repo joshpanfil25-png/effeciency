@@ -19,13 +19,13 @@ export const site = {
   linkedin: 'https://www.linkedin.com/company/efficiency-media/',
 }
 
-// Section anchors live on the home page; Blog is its own route.
+// Section anchors on the home page. Version A intentionally has no Blog link —
+// the blog is styled to Version B and linked only from Version B's nav.
 export const navLinks = [
   { label: 'About', to: '/', hash: '#about' },
   { label: 'Services', to: '/', hash: '#services' },
   { label: 'Team', to: '/', hash: '#team' },
   { label: 'Results', to: '/', hash: '#testimonials' },
-  { label: 'Blog', to: '/blog', hash: '' }, // ← blog addition
   { label: 'Contact', to: '/', hash: '#contact' },
 ]
 

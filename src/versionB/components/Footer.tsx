@@ -1,4 +1,19 @@
+import { useLocation, useNavigate } from "react-router-dom";
+
 const Footer = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const goToSection = (id: string) => {
+    // From the homepage, scroll in place; from elsewhere (e.g. /blog), navigate
+    // home to the section. Homepage behavior is unchanged.
+    if (location.pathname !== "/") {
+      navigate("/#" + id);
+      return;
+    }
+    document.querySelector(`#${id}`)?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <footer className="bg-navy text-navy-foreground py-12">
       <div className="container mx-auto px-6">
@@ -17,9 +32,9 @@ const Footer = () => {
               <button
                 key={label}
                 onClick={() => {
-                  const id = label.toLowerCase().replace(/\s+/g, "");
+                  const key = label.toLowerCase().replace(/\s+/g, "");
                   const map: Record<string, string> = { home: "home", aboutus: "about", services: "services", testimonials: "testimonials" };
-                  document.querySelector(`#${map[id] || id}`)?.scrollIntoView({ behavior: "smooth" });
+                  goToSection(map[key] || key);
                 }}
                 className="text-navy-foreground/60 text-sm hover:text-teal-light transition-colors"
               >
