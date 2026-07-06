@@ -6,7 +6,6 @@ import { HelmetProvider } from 'react-helmet-async'
 
 import './index.css'
 import App from './App.tsx'
-import { VersionProvider } from '@/versionB/VersionContext'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -23,9 +22,7 @@ createRoot(document.getElementById('root')!).render(
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
-          <VersionProvider>
-            <App />
-          </VersionProvider>
+          <App />
         </BrowserRouter>
       </QueryClientProvider>
     </HelmetProvider>

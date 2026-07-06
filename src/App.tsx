@@ -1,40 +1,31 @@
 import { Routes, Route } from 'react-router-dom'
 
-import Layout from '@/components/Layout'
-import Home from '@/pages/Home'
-import NotFound from '@/pages/NotFound'
-import { useVersion } from '@/versionB/VersionContext'
 import VersionBHome from '@/versionB/VersionBHome'
-import VersionToggle from '@/versionB/VersionToggle'
+import NotFound from '@/pages/NotFound'
 // Blog is styled to match Version B (Lia's design) — see src/versionB/pages.
 import BlogIndex from '@/versionB/pages/BlogIndex'
 import BlogPost from '@/versionB/pages/BlogPost'
-
-// The homepage: Version A (default) or Version B, with the floating toggle
-// visible on both. Only the homepage swaps — the blog is never affected.
-function HomeRoute() {
-  const { version } = useVersion()
-  return (
-    <>
-      {version === 'B' ? <VersionBHome /> : <Home />}
-      <VersionToggle />
-    </>
-  )
-}
+// Ad-campaign landing pages — reached only via ad links, not in nav/footer.
+import AuditLanding from '@/versionB/pages/AuditLanding'
+import AuditThankYou from '@/versionB/pages/AuditThankYou'
 
 export default function App() {
   return (
     <Routes>
-      <Route element={<Layout />}>
-        <Route path="/" element={<HomeRoute />} />
+      {/* Homepage — Version B (the version the client chose). Each page below
+          supplies its own Navbar/Footer, so there's no shared Layout wrapper. */}
+      <Route path="/" element={<VersionBHome />} />
 
-        {/* ── Blog routes (Version B styled) — above the catch-all ── */}
-        <Route path="/blog" element={<BlogIndex />} />
-        <Route path="/blog/:slug" element={<BlogPost />} />
+      {/* ── Blog routes (Version B styled) — above the catch-all ── */}
+      <Route path="/blog" element={<BlogIndex />} />
+      <Route path="/blog/:slug" element={<BlogPost />} />
 
-        {/* Catch-all 404 — keep this last */}
-        <Route path="*" element={<NotFound />} />
-      </Route>
+      {/* ── Ad-campaign pages — above the catch-all ── */}
+      <Route path="/audit" element={<AuditLanding />} />
+      <Route path="/audit/thank-you" element={<AuditThankYou />} />
+
+      {/* Catch-all 404 — keep this last */}
+      <Route path="*" element={<NotFound />} />
     </Routes>
   )
 }
