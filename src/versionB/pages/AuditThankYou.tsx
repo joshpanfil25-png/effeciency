@@ -4,7 +4,7 @@ import { CheckCircle2 } from "lucide-react";
 import CampaignHeader from "@/versionB/components/CampaignHeader";
 import { Button } from "@/versionB/components/ui/button";
 
-// TODO: Insert Michelle Marlo's Calendly link here once provided.
+// TODO: Paste Michelle Marlo's Calendly link here.
 const CALENDLY_URL = "";
 
 const AuditThankYou = () => {
@@ -41,7 +41,6 @@ const AuditThankYou = () => {
               size="lg"
               className="text-base px-8 h-12 bg-teal hover:bg-teal-dark text-primary-foreground"
             >
-              {/* TODO: Insert Michelle Marlo's Calendly link here once provided. */}
               <a
                 href={CALENDLY_URL || "#"}
                 target={CALENDLY_URL ? "_blank" : undefined}

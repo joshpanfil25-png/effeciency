@@ -1,12 +1,28 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) — GA4, installed directly (in addition to GTM). -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FDP4D17WMX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FDP4D17WMX');
+    </script>
+    <!-- End Google tag (gtag.js) -->
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NRKXNDBC');</script>
+    <!-- End Google Tag Manager -->
+    <!-- GA4, GTM, and the /audit lead form all share one window.dataLayer (each
+         guards with `dataLayer || []`, so there is no duplicate init). The form
+         pushes { event: 'lead_submit' } for Roz's GTM conversion tags. -->
+
     <meta charset="UTF-8" />
-
-    <!-- TODO: paste Roz's GTM container snippet here once she provides the container ID -->
-    <!-- The /audit lead form pushes { event: 'lead_submit' } to window.dataLayer;
-         Roz's GTM conversion tags should listen for that event. -->
-
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -25,6 +41,11 @@
     <title>Efficiency Media — Strategic Media Planning &amp; Buying</title>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRKXNDBC"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
