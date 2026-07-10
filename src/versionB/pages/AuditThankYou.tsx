@@ -2,10 +2,6 @@ import { Helmet } from "react-helmet-async";
 import { CheckCircle2 } from "lucide-react";
 
 import CampaignHeader from "@/versionB/components/CampaignHeader";
-import { Button } from "@/versionB/components/ui/button";
-
-// TODO: Paste Michelle Marlo's Calendly link here.
-const CALENDLY_URL = "";
 
 const AuditThankYou = () => {
   return (
@@ -33,23 +29,8 @@ const AuditThankYou = () => {
           <p className="mt-6 text-lg leading-relaxed text-navy/80">
             A senior strategist from Efficiency Media will review your digital footprint within the
             next 24 hours. Your introductory call will be directly with an executive who handles
-            live media deployment every day. Expect a calendar invite shortly.
+            live media deployment every day. We'll reach out to you shortly.
           </p>
-          <div className="mt-10">
-            <Button
-              asChild
-              size="lg"
-              className="text-base px-8 h-12 bg-teal hover:bg-teal-dark text-primary-foreground"
-            >
-              <a
-                href={CALENDLY_URL || "#"}
-                target={CALENDLY_URL ? "_blank" : undefined}
-                rel={CALENDLY_URL ? "noopener noreferrer" : undefined}
-              >
-                Book Your Call
-              </a>
-            </Button>
-          </div>
         </div>
       </section>
     </div>
