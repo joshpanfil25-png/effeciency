@@ -1,14 +1,5 @@
 import { team } from '@/data/site'
 
-function initials(name: string) {
-  return name
-    .split(/\s+/)
-    .slice(0, 2)
-    .map((p) => p[0])
-    .join('')
-    .toUpperCase()
-}
-
 export default function TeamSection() {
   return (
     <section id="team" className="py-24 sm:py-32">
@@ -25,12 +16,14 @@ export default function TeamSection() {
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {team.map((m) => (
             <div key={m.name} className="rounded-lg border border-border p-6">
-              <div className="flex size-16 items-center justify-center rounded-full bg-gradient-to-br from-teal to-navy font-serif text-xl font-bold text-white">
-                {initials(m.name)}
-              </div>
+              <img
+                src={m.img}
+                alt={m.name}
+                className="size-16 rounded-full object-cover object-top"
+              />
               <h3 className="mt-5 font-serif text-xl text-navy">{m.name}</h3>
               <p className="mt-1 text-sm font-medium text-primary">{m.role}</p>
-              <p className="mt-3 text-sm leading-relaxed text-navy/65">
+              <p className="mt-3 line-clamp-5 text-sm leading-relaxed text-navy/65">
                 {m.bio}
               </p>
             </div>

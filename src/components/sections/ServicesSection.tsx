@@ -1,5 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { services } from '@/data/site'
+import {
+  badgeGoogleCertified,
+  badgeGooglePartner,
+  badgeWbe,
+  services,
+} from '@/data/site'
 
 export default function ServicesSection() {
   return (
@@ -35,6 +40,24 @@ export default function ServicesSection() {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        <div className="mt-14 flex flex-wrap items-center justify-center gap-6">
+          <img
+            src={badgeGooglePartner}
+            alt="Google Partner"
+            className="h-28 rounded-lg border border-border bg-white object-contain p-3"
+          />
+          <img
+            src={badgeGoogleCertified}
+            alt="Google Certified"
+            className="h-28 rounded-lg border border-border bg-white object-contain p-3"
+          />
+          <img
+            src={badgeWbe}
+            alt="Certified WBE - Women Business Enterprise"
+            className="h-28 rounded-lg border border-border bg-white object-contain p-3"
+          />
         </div>
       </div>
     </section>
