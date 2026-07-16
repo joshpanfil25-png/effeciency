@@ -3,6 +3,7 @@ import { Layers, BarChart3, Zap, TrendingUp } from "lucide-react";
 import omnichannelFramework from "@/versionB/assets/omnichannel-framework.png";
 import googlePartner from "@/versionB/assets/google-partner.jpg";
 import googleCertified from "@/versionB/assets/google-certified.png";
+import wbeBadge from "@/versionB/assets/wbe-badge.png";
 
 const services = [
   {
@@ -112,6 +113,11 @@ const ServicesSection = () => {
           <img
             src={googleCertified}
             alt="Google Certified"
+            className="h-40 object-contain rounded bg-white p-3"
+          />
+          <img
+            src={wbeBadge}
+            alt="Certified WBE - Women Business Enterprise"
             className="h-40 object-contain rounded bg-white p-3"
           />
         </motion.div>

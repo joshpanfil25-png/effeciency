@@ -7,8 +7,6 @@ import marci from "@/versionB/assets/team/marci.jpg";
 import trista from "@/versionB/assets/team/trista.jpg";
 import roz from "@/versionB/assets/team/roz.jpg";
 import melanie from "@/versionB/assets/team/melanie.jpg";
-import christina from "@/versionB/assets/team/christina.jpg";
-import josh from "@/versionB/assets/team/josh.jpg";
 import jordan from "@/versionB/assets/team/jordan.png";
 import jessica from "@/versionB/assets/team/jessica.jpg";
 import megan from "@/versionB/assets/team/megan.jpg";
@@ -47,18 +45,6 @@ const team = [
     role: "VP, Director of Media Planning",
     img: melanie,
     bio: "Melanie brings more than two decades of media experience to Efficiency Media, where she has been a valued team member for the past 10 years. Her background includes over 13 years at an agency in downtown Chicago, where she developed a strong foundation in both national and local media planning and buying. Melanie offers a unique perspective through her hands-on experience across the full media lifecycle, combining strategic planning leadership with practical buying expertise. She has planned and executed media strategies across more than 125 DMAs nationwide, providing deep insight into how national objectives translate at the local market level. She brings extensive healthcare media expertise, having worked with numerous hospitals and medical clients for 25 years. In addition to healthcare, she has experience across various restaurant, retail, financial, education, B2B, home improvement, and consumer packaged goods clients giving her a well-rounded understanding of diverse business categories and audience needs.",
-  },
-  {
-    name: "Christina Swanson",
-    role: "Digital Operations & Social Manager",
-    img: christina,
-    bio: "As Digital Operations & Social Manager at Efficiency Media, Christina ensures seamless execution across client accounts, team workflows, and campaign performance. She oversees budget pacing, reporting, and billing, while driving strategy and paid social campaigns that deliver results. With over a decade of experience in paid social strategy and content management, Christina has led successful campaigns for clients in healthcare, higher education, e-commerce and the nonprofit sector. Our clients benefit from her strategic expertise and hands-on execution.",
-  },
-  {
-    name: "Josh Swanson",
-    role: "Data Analytics & Paid Media Specialist (Social & Programmatic)",
-    img: josh,
-    bio: "As Data Analytics and Programmatic Lead at Efficiency Media, Josh drives campaign performance through analytics, audience strategy, and technical implementation. He oversees programmatic advertising, dashboard development, and paid social campaigns. Drawing on over a decade of experience in data analytics and IT, Josh applies technical precision to digital advertising challenges. He has managed successful campaigns for clients in healthcare, multi-location franchises, and home improvement companies, with specialized knowledge in HIPAA-compliant data practices. Clients value his ability to turn complex data into actionable strategies that deliver measurable results.",
   },
   {
     name: "Jordan Louis",
