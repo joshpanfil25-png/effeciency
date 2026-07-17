@@ -28,7 +28,7 @@ export const site = {
   description:
     'Efficiency Media is a strategic media planning and buying agency. We build integrated, omnichannel campaigns that make every dollar work harder.',
   email: 'info@efficiencymedia.com',
-  phone: '773.463.8800',
+  phone: '773.463.8801',
   city: 'Chicago, IL',
   linkedin: 'https://www.linkedin.com/company/efficiency-media/',
 }
@@ -43,36 +43,37 @@ export const navLinks = [
   { label: 'Contact', to: '/', hash: '#contact' },
 ]
 
+// Client-approved service copy — verbatim; do not reword without approval.
 export const services = [
   {
     icon: Target,
     title: 'Media Strategy',
-    body: 'Audience-first planning that maps every channel to a measurable business outcome — not vanity reach.',
+    body: 'Cross-channel planning built on audience intelligence, competitive analysis, and accountable budget allocation.',
   },
   {
     icon: BarChart3,
     title: 'Programmatic',
-    body: 'Real-time bidding across display, video, and CTV, optimized continuously against your KPIs.',
+    body: 'Algorithmic buying across display, video, audio, out-of-home with continuous optimization against verified performance data.',
   },
   {
     icon: Search,
     title: 'Paid Search',
-    body: 'Intent-driven search programs engineered for efficient acquisition and durable share of voice.',
+    body: 'Full-funnel search strategy engineered for qualified acquisition, quality score efficiency, and sustainable share of voice.',
   },
   {
     icon: Share2,
     title: 'Paid Social',
-    body: 'Creative-led social buying across Meta, TikTok, and LinkedIn with rigorous incrementality testing.',
+    body: 'Precision audience targeting across all platforms backed by structured testing and incrementality measurement.',
   },
   {
     icon: Radio,
-    title: 'Broadcast & Audio',
-    body: 'TV, radio, and streaming audio negotiated with the leverage of two decades of buying relationships.',
+    title: 'Local Media',
+    body: 'Linear TV, radio, and streaming audio, out-of-home planned and negotiated with decades of buying relationships and market knowledge.',
   },
   {
     icon: Megaphone,
     title: 'Measurement',
-    body: 'Clean-room attribution and media-mix modeling so you always know what is actually working.',
+    body: 'Unified attribution and reporting frameworks that connect spend to outcomes across every channel.',
   },
 ]
 
@@ -157,10 +158,17 @@ export const team = [
   },
 ]
 
-// Real client testimonial, ported verbatim from Version B. Seven more real
-// quotes are available in src/versionB/components/TestimonialsSection.tsx
-// (Orlando Magazine, Orlando Health, Oberweis, Sport Clips, MNI, Conversant,
-// WMAQ-TV).
+// Real client testimonials only — the section lays itself out for any count
+// (1 centered, 2 or 3+ in a grid). To add one the client approves, paste an
+// entry below Paul's following the same shape:
+//   {
+//     quote: '…approved quote, verbatim…',
+//     name: 'First Last',
+//     title: 'Role, Company',
+//   },
+// Seven more real quotes await approval in
+// src/versionB/components/TestimonialsSection.tsx (Orlando Magazine, Orlando
+// Health, Oberweis, Sport Clips, MNI, Conversant, WMAQ-TV).
 export const testimonials = [
   {
     quote:

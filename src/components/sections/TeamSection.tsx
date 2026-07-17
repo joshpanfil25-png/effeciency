@@ -1,4 +1,37 @@
+import { useState } from 'react'
+
 import { team } from '@/data/site'
+
+function TeamCard({ member }: { member: (typeof team)[number] }) {
+  const [expanded, setExpanded] = useState(false)
+
+  return (
+    <div className="rounded-lg border border-border p-6">
+      <img
+        src={member.img}
+        alt={member.name}
+        className="size-16 rounded-full object-cover object-top"
+      />
+      <h3 className="mt-5 font-serif text-xl text-navy">{member.name}</h3>
+      <p className="mt-1 text-sm font-medium text-primary">{member.role}</p>
+      <p
+        className={`mt-3 text-sm leading-relaxed text-navy/65 ${
+          expanded ? 'whitespace-pre-line' : 'line-clamp-5'
+        }`}
+      >
+        {member.bio}
+      </p>
+      <button
+        type="button"
+        onClick={() => setExpanded((e) => !e)}
+        aria-expanded={expanded}
+        className="mt-2 text-sm font-medium text-primary hover:underline"
+      >
+        {expanded ? 'Read less' : 'Read more'}
+      </button>
+    </div>
+  )
+}
 
 export default function TeamSection() {
   return (
@@ -15,18 +48,7 @@ export default function TeamSection() {
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {team.map((m) => (
-            <div key={m.name} className="rounded-lg border border-border p-6">
-              <img
-                src={m.img}
-                alt={m.name}
-                className="size-16 rounded-full object-cover object-top"
-              />
-              <h3 className="mt-5 font-serif text-xl text-navy">{m.name}</h3>
-              <p className="mt-1 text-sm font-medium text-primary">{m.role}</p>
-              <p className="mt-3 line-clamp-5 text-sm leading-relaxed text-navy/65">
-                {m.bio}
-              </p>
-            </div>
+            <TeamCard key={m.name} member={m} />
           ))}
         </div>
       </div>
