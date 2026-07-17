@@ -15,7 +15,7 @@ export default function TestimonialsSection() {
           </h2>
         </div>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+        <div className="mx-auto mt-14 grid max-w-2xl gap-6">
           {testimonials.map((t) => (
             <figure
               key={t.name}

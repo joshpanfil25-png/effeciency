@@ -84,12 +84,6 @@ export { default as badgeWbe } from '@/versionB/assets/wbe-badge.png'
 // Real roster — bios ported verbatim from Version B.
 export const team = [
   {
-    name: 'Amy Abrahams',
-    role: 'Founder',
-    img: imgAmy,
-    bio: 'Efficiency Media was founded in April 2007 by Amy Abrahams, whose 12 years of combined experience in selling media and managing radio sales teams created the foundation of our agency. Amy\'s "insider knowledge" of the media world and her commitment to exceptional client service balanced with meaningful work-life balance became the cornerstones of Efficiency Media. In January 2026, Amy retired and transitioned the agency to employee ownership, ensuring that these core values would continue to guide our work—carrying forward Amy\'s legacy while building an exciting future together.',
-  },
-  {
     name: 'Michelle Marlo',
     role: 'President, Chief Client Officer',
     img: imgMichelle,
@@ -155,35 +149,30 @@ export const team = [
     img: imgLaura,
     bio: 'With over 13 years of industry-leading experience, Laura serves as the Billing Coordinator at Efficiency Media. Her expertise is rooted in her previous tenure as a Media and Traffic Coordinator for SPM Marketing and Communications, allowing her to seamlessly integrate logistics and media strategy into her current financial operations. At Efficiency Media, Laura plays a pivotal role in streamlining invoicing workflows and maintaining strict financial integrity across a diverse portfolio of client accounts.',
   },
+  {
+    name: 'Amy Abrahams',
+    role: 'Founder',
+    img: imgAmy,
+    bio: 'Efficiency Media was founded in April 2007 by Amy Abrahams, whose 12 years of combined experience in selling media and managing radio sales teams created the foundation of our agency. Amy\'s "insider knowledge" of the media world and her commitment to exceptional client service balanced with meaningful work-life balance became the cornerstones of Efficiency Media. In January 2026, Amy retired and transitioned the agency to employee ownership, ensuring that these core values would continue to guide our work—carrying forward Amy\'s legacy while building an exciting future together.',
+  },
 ]
 
-// Real client testimonials, ported verbatim from Version B. Five more are
-// available in src/versionB/components/TestimonialsSection.tsx (Sport Clips,
-// MNI, Conversant, WMAQ-TV, EverDry / Ohio State Waterproofing).
+// Real client testimonial, ported verbatim from Version B. Seven more real
+// quotes are available in src/versionB/components/TestimonialsSection.tsx
+// (Orlando Magazine, Orlando Health, Oberweis, Sport Clips, MNI, Conversant,
+// WMAQ-TV).
 export const testimonials = [
   {
     quote:
-      "From the minute we were introduced to Amy, Melanie and the Efficiency Media team—one thing was immediately clear, Efficiency Media is putting their clients first. Egos & agendas are checked at the door, and a genuine interest in their clients' success shines through. Thoughtful, informed and responsive, they have created a supremely unique and open environment for communication and collaboration.",
-    name: 'Rosemary Bowers',
-    title: 'Senior Account Manager, Orlando Magazine',
-  },
-  {
-    quote:
-      'The team at Efficiency Media has proven to be much more than a media planning and buying service for Orlando Health. We consider the team partners in our organization. Not only was the planning strategic, I was most impressed by the negotiations that took place on behalf of Orlando Health. It is with confidence of proper placement and the best price, we go to market with our messages.',
-    name: 'Rod C. James',
-    title: 'Orlando Health',
-  },
-  {
-    quote:
-      'Oberweis has been working with Efficiency Media from the beginning. We are extremely pleased with the professionalism, knowledge and skill demonstrated by Amy and her outstanding team. Efficiency Media has always been thorough and highly responsive. They are tough negotiators on our behalf and we can always trust their advice.',
-    name: 'Bruce Bedford',
-    title: 'Vice President, Marketing, Oberweis Dairy',
+      'Over the past 9 years we have worked with Efficiency Media and they always have our best interests in mind. One of the things I love about Efficiency Media is the tough negotiation skills and they never miss a deadline. I have recommended Efficiency Media to all my franchisees.',
+    name: 'Paul Trecarichi',
+    title: 'EverDry / Ohio State Waterproofing',
   },
 ]
 
 export const stats = [
-  { value: '$120M+', label: 'Media managed' },
+  { value: '$1B+', label: 'Media managed' },
   { value: '38%', label: 'Avg. CPA reduction' },
-  { value: '20 yrs', label: 'Buying relationships' },
-  { value: '40+', label: 'Brands served' },
+  { value: '100+ yrs', label: 'Buying relationships' },
+  { value: '50+', label: 'Brands served' },
 ]
