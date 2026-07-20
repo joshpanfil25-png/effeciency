@@ -176,6 +176,18 @@ export const testimonials = [
     name: 'Paul Trecarichi',
     title: 'EverDry / Ohio State Waterproofing',
   },
+  {
+    quote:
+      'The team at Efficiency Media has proven to be much more than a media planning and buying service for Orlando Health. We consider the team partners in our organization. On the heels of a new brand campaign, Efficiency Media jumped in to properly execute the campaign in the most relevant outlets. Not only was the planning strategic, I was most impressed by the negotiations that took place on behalf of Orlando Health. It is with confidence of proper placement and the best price, we go to market with our messages.',
+    name: 'Rod C. James',
+    title: 'Orlando Health',
+  },
+  {
+    quote:
+      "Expertise, value and integrity—sometimes rarities in our industry, they are in overflow at Efficiency Media! I've had the good fortune to work with the team for a decade. It's incredibly impressive the way Efficiency Media navigates the changing media landscape—blending traditional and digital buying proficiencies—while single-mindedly looking out for the best interests of our brand. Efficiency Media would bring value to any client.",
+    name: 'Danielle Linden',
+    title: 'Sport Clips',
+  },
 ]
 
 export const stats = [
