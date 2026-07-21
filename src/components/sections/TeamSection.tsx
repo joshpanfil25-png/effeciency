@@ -14,21 +14,25 @@ function TeamCard({ member }: { member: (typeof team)[number] }) {
       />
       <h3 className="mt-5 font-serif text-xl text-navy">{member.name}</h3>
       <p className="mt-1 text-sm font-medium text-primary">{member.role}</p>
-      <p
-        className={`mt-3 text-sm leading-relaxed text-navy/65 ${
-          expanded ? 'whitespace-pre-line' : 'line-clamp-5'
-        }`}
-      >
-        {member.bio}
-      </p>
-      <button
-        type="button"
-        onClick={() => setExpanded((e) => !e)}
-        aria-expanded={expanded}
-        className="mt-2 text-sm font-medium text-primary hover:underline"
-      >
-        {expanded ? 'Read less' : 'Read more'}
-      </button>
+      {member.bio && (
+        <>
+          <p
+            className={`mt-3 text-sm leading-relaxed text-navy/65 ${
+              expanded ? 'whitespace-pre-line' : 'line-clamp-5'
+            }`}
+          >
+            {member.bio}
+          </p>
+          <button
+            type="button"
+            onClick={() => setExpanded((e) => !e)}
+            aria-expanded={expanded}
+            className="mt-2 text-sm font-medium text-primary hover:underline"
+          >
+            {expanded ? 'Read less' : 'Read more'}
+          </button>
+        </>
+      )}
     </div>
   )
 }

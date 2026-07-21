@@ -82,55 +82,57 @@ export { default as badgeGooglePartner } from '@/versionB/assets/google-partner.
 export { default as badgeGoogleCertified } from '@/versionB/assets/google-certified.png'
 export { default as badgeWbe } from '@/versionB/assets/wbe-badge.png'
 
-// Real roster — bios ported verbatim from Version B.
+// Real roster with client-approved bios (verbatim). Titles are the current
+// ones the client provided — do not derive titles from bio text. Members whose
+// bio is '' render as name + title only (no Read more toggle).
 export const team = [
   {
     name: 'Michelle Marlo',
     role: 'President, Chief Client Officer',
     img: imgMichelle,
-    bio: "Michelle serves as President and Chief Client Officer of Efficiency Media, a role she assumed in January 2026 following the agency's transition to employee ownership. In this capacity, she leads the agency's strategic vision while championing the core values established by founder Amy: exceptional client commitment balanced with meaningful work-life balance for employees. Michelle's leadership spans both the strategic direction of the agency and the deep client relationships that have been the foundation of Efficiency Media's success. Her expertise in driving innovative media strategies across traditional and digital platforms has positioned the agency as a trusted partner for healthcare, retail, financial services, and educational institutions.\n\nSince joining Efficiency Media in 2012, Michelle has brought a distinctive perspective to the agency, with comprehensive expertise spanning both media planning and buying for local and national campaigns. Her strategic approach starts with a deep understanding of client’s business and goals combined with market research, competitive analysis, and evolving media consumption patterns to deliver measurable results for clients. With over 20 years of experience in media planning, buying, and account management, Michelle's insights and client-first philosophy continue to drive growth and innovation across every account she touches.",
+    bio: 'Michelle brought a unique quality when she joined Efficiency Media in 2012: having expertise on both the planning and buying side for local and national media. Providing strategic analysis on market research, competitive spend and media consumption is something that Michelle enjoys bringing to the table. While managing day to day relationships with clients is currently her main focus, she is also highly experienced in buying all media platforms including print, radio, broadcast TV, cable TV and digital for clients including AMITA Health, Orlando Health, Sport Clips, Terlato Wines, Crate&Barrel, CNA Insurance, Northwestern Hospital, Health Alliance, and DePaul University. Michelle joined Efficiency Media with over 10 years of media planning and buying along with account management experience from SpaceTime. During her tenure with Efficiency Media, her media insights and strategic thinking have proved an asset for every account.',
   },
   {
     name: 'Marci Crane',
     role: 'President, Client Services and Linear & Streaming Platforms',
     img: imgMarci,
-    bio: 'Marci is a media industry veteran with over 30 years of experience. She has worked at both large agencies, including J. Walter Thompson and Starcom, as well as boutique firms such as GRP Media, Two X Four, and now Efficiency Media. Throughout her career, she has serviced a diverse range of clients across industries including automotive, pharmaceutical, financial services, quick-service restaurants, professional sports, tourism, and legal. Her client experience includes brands such as Ford Motor Company, Lexus, Toyota, Fox Movie Studios, the Chicago White Sox, Northern Trust, Amita Health, and Warner Lambert. With this breadth of experience, Marci is a highly skilled negotiator who understands the importance of delivering superior customer service to her clients.',
+    bio: 'Marci is a 20 plus year veteran in the media industry. She has worked in large firms such as J. Walter Thompson & Starcom and boutique firms, GRP Media, Two X Four and now Efficiency Media. She has honed her skills by servicing a broad range of clients from the automotive, pharmaceutical, financial services, quick service food, professional sports, tourism, and legal industries. A sampling of clients include Ford Motor Company, Lexus, Toyota, Fox Movie Studios, Chicago White Sox, Northern Trust, Amita Health and Warner Lambert. By virtue of all this experience Marci is an outstanding negotiator and understands the value of superior customer service to her clients.',
   },
   {
     name: 'Trista Countryman',
     role: 'Chief Financial & Operations Officer',
     img: imgTrista,
-    bio: 'Trista’s career has evolved alongside the media landscape. With a foundation in hands-on media execution, she brings a unique, media-informed perspective to agency operations and finance—where strategy, performance, and efficiency intersect. Today, Trista oversees financial management, operational strategy, and internal systems at the agency, bridging the gap between client goals and agency execution. Known for her attention to detail and thoughtful decision making, she plays a critical role in supporting long-term success for both clients and the internal team.',
+    bio: 'With over 11 years of media planning and buying experience, Trista brings a wealth of knowledge to Efficiency Media. During her 10 years with Noble / Gatesman, Trista developed and implemented media campaigns of all sizes, both national and local in scope. She has been involved at every level of the project from managing budgets to overseeing the planners and buyers, from researching industry competitive and new media to trafficking of all traditional media. Trista is also a seasoned negotiator for TV, radio, print, digital, outdoor, and sports sponsorships.',
   },
   {
     name: 'Roz-Linn Finn',
     role: 'Executive, Digital Marketing Strategy & Technology',
     img: imgRoz,
-    bio: 'Roz-Linn joins Efficiency Media with over 10 years of proven success in driving growth through the strategic integration of digital media and marketing technology. With a career defined by leading large-scale digital transformations, she specializes in auditing MarTech infrastructure and implementing data-driven strategies that bridge the gap between technical operations and customer acquisition. Before joining the team, Roz-Linn served as VP of Marketing for U.S. Waterproofing, where she centralized marketing efforts across multiple brands and built a high-performing division from the ground up. Her extensive background includes leadership roles at Jon-Don, where she spearheaded a complete overhaul of marketing technology to drive significant revenue growth, and Navistar, Inc., where she managed digital strategy across a global brand portfolio. She also brings valuable agency experience from Lever Interactive and Mindstream Media, servicing national brands such as Phillips Lifeline, Beltone, Northwestern College, and Sherwin Williams. An expert in SEO, SEM, and conversion rate optimization, Roz-Linn is passionate about using behavioral data to streamline the customer journey. Her innovative approach to digital lead tracking and UX was recognized in 2019 when she received the Women of Femme Award for excellence in digital transformation. At Efficiency Media, Roz-Linn focuses on scaling client growth by ensuring their digital ecosystems are both technically sound and strategically aligned with their business goals.',
+    bio: '',
   },
   {
     name: 'Melanie Ivanov',
     role: 'VP, Director of Media Planning',
     img: imgMelanie,
-    bio: 'Melanie brings more than two decades of media experience to Efficiency Media, where she has been a valued team member for the past 10 years. Her background includes over 13 years at an agency in downtown Chicago, where she developed a strong foundation in both national and local media planning and buying. Melanie offers a unique perspective through her hands-on experience across the full media lifecycle, combining strategic planning leadership with practical buying expertise. She has planned and executed media strategies across more than 125 DMAs nationwide, providing deep insight into how national objectives translate at the local market level. She brings extensive healthcare media expertise, having worked with numerous hospitals and medical clients for 25 years. In addition to healthcare, she has experience across various restaurant, retail, financial, education, B2B, home improvement, and consumer packaged goods clients giving her a well-rounded understanding of diverse business categories and audience needs.',
+    bio: 'Melanie comes to Efficiency Media after spending almost 13 years at her former agency, SpaceTime. She provides in-depth knowledge in both local market and national media planning and buying. Her extensive media planning experience includes over 120 DMAs throughout the country after eight years managing the Jimmy John’s account. Melanie has spent many years buying spot radio, television and cable, outdoor and transit, local print media as well as professional and college sports sponsorships. She also has more than 10 years of experience on the healthcare side, having managed the media support for Northwestern Hospital, the Loyola University Health System and Northwest Community Healthcare.',
   },
   {
     name: 'Jordan Louis',
     role: 'Paid Search Manager',
     img: imgJordan,
-    bio: 'Jordan is a digital marketing leader with ten years of agency experience creating, executing, and optimizing innovative marketing strategies across online channels, but found her "home" in SEM. She has successfully managed and scaled campaigns in multiple verticals, including e-commerce, sports, healthcare, finance, and transportation. She is passionate about staying ahead of industry trends and continuously refining strategies to meet the ever-changing needs of the digital ad world. Outside of work, she enjoys sunset boat rides with her dog Marshall and reading a good book with her cat Theodore.',
+    bio: '',
   },
   {
     name: 'Jessica Rhea',
     role: 'Manager of Media Planning & Buying',
     img: imgJessica,
-    bio: 'Jessica brings decades of media planning and buying experience to Efficiency Media, with a strong focus on local and regional media strategy grounded in data, performance measurement, and disciplined negotiation. In a previous role at RPM, she led media research and planning while managing negotiations across multiple accounts, overseeing budgets ranging from modest local investments to multi-million-dollar campaigns, consistently driving efficiency, reach, and cost-effective results. Jessica began her career at Foot, Cone & Belding in Chicago as an assistant media planner on national accounts, where she built a strong foundation in large-scale media strategy, analytics, and cross-market coordination—skills that continue to shape her practical, collaborative, and results-driven approach today. Throughout her career, Jessica has specialized in broadcast, print and out-of-home buying, delivering market-level strategies that balance brand goals with measurable outcomes—optimizing CPMs, improving market coverage, and maximizing frequency within budget. She has executed campaigns for nationally recognized brands including Gatorade, Kraft Pizza Company, Horseshoe and Harrah’s Casinos, Tier II and Tier III automotive clients, White Hen, 7-Eleven, and the Field Museum, tailoring each plan to the performance dynamics of individual markets and campaign goals.',
+    bio: 'Jessica brings more than 10 years of media experience to Efficiency Media. In her most recent role at RPM, Jessica was responsible for overseeing all research and media planning while handling media negotiations on several accounts. Throughout her time, she has honed her skills on both print and outdoor buying working accounts such as Gatorade, Kraft Pizza Co., Horseshoe and Harrah’s Casinos, Tier II and Tier III Automotive, White Hen, 7-Eleven and Field Museum. Jessica began her career at Foot, Cone & Belding in Chicago as an assistant media planner on national accounts.',
   },
   {
     name: 'Megan Michalak',
     role: 'Integrated Media Buyer',
     img: imgMegan,
-    bio: "Megan brings over a decade of industry experience to Efficiency Media. In her most recent role as Account Director at NSA Media Group, she collaborated with clients and agencies to develop integrated local print and digital strategies aimed at reaching consumers at key moments. Megan has worked with a diverse array of clients, including national grocery chains, financial services, healthcare systems, and quick-service restaurants. Throughout her career, she has honed her skills to deeply understand the client's perspective, ensuring clear alignment with project objectives and the delivery of successful campaigns.",
+    bio: '',
   },
   {
     name: 'Suzanne Racz',
@@ -142,19 +144,19 @@ export const team = [
     name: 'Amanda Procter',
     role: 'Traffic Manager / Media Buyer',
     img: imgAmanda,
-    bio: 'Amanda is a dynamic marketing and media strategist with a rich background helping advertisers succeed. She was previously Marketing Director in the home improvement industry, placing TV, radio, print, event advertising and more. Afterward, she continued her media acumen as a Media Director, specializing in Tier 3 automotive media placement. Most recently, she managed independent-owned agency and advertiser accounts at Comscore, turning data into meaningful strategies that empowered client growth. Known for her love of Excel (yes, really!) and a knack for uncovering insights, Amanda blends analytical rigor with a collaborative spirit. She thrives on helping clients exceed expectations—and has fun doing it.',
+    bio: '',
   },
   {
     name: 'Laura Liden',
     role: 'Billing Coordinator',
     img: imgLaura,
-    bio: 'With over 13 years of industry-leading experience, Laura serves as the Billing Coordinator at Efficiency Media. Her expertise is rooted in her previous tenure as a Media and Traffic Coordinator for SPM Marketing and Communications, allowing her to seamlessly integrate logistics and media strategy into her current financial operations. At Efficiency Media, Laura plays a pivotal role in streamlining invoicing workflows and maintaining strict financial integrity across a diverse portfolio of client accounts.',
+    bio: 'Laura joined Efficiency Media with over 8 years of industry experience. In her most recent role with SPM Marketing and Communications, Laura served as the Media and Traffic Coordinator. In addition to working with both clients and vendors to traffic radio, TV, cable, print and billboards, Laura also worked in the billing department to coordinate all client invoices.',
   },
   {
     name: 'Amy Abrahams',
     role: 'Founder',
     img: imgAmy,
-    bio: 'Efficiency Media was founded in April 2007 by Amy Abrahams, whose 12 years of combined experience in selling media and managing radio sales teams created the foundation of our agency. Amy\'s "insider knowledge" of the media world and her commitment to exceptional client service balanced with meaningful work-life balance became the cornerstones of Efficiency Media. In January 2026, Amy retired and transitioned the agency to employee ownership, ensuring that these core values would continue to guide our work—carrying forward Amy\'s legacy while building an exciting future together.',
+    bio: 'Before opening the doors at Efficiency Media, Amy spent 12 years selling Chicago radio. Her radio sales career includes nine years at WTMX-FM, The Mix, where she was awarded the Presidential Sales Award by Bonneville International, the station’s owners. The award is given annually to one seller nationwide who excels most in creating and developing success for new advertisers, client service and commitment to the company’s core values. Additionally, Amy was the local sales manager for WLIT-FM where she was responsible for the local sales staff, their budget and many client brainstorming facilitations. While at WLIT, Amy was also given the responsibility of hiring and training all new employees of the six Chicagoland Clear Channel radio stations. Amy started her career selling Spanish radio for WOPA.',
   },
 ]
 
