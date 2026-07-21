@@ -18,6 +18,7 @@ import imgMelanie from '@/versionB/assets/team/melanie.jpg'
 import imgJordan from '@/versionB/assets/team/jordan.png'
 import imgJessica from '@/versionB/assets/team/jessica.jpg'
 import imgMegan from '@/versionB/assets/team/megan.jpg'
+import imgJeremy from '@/versionB/assets/team/jeremy.jpg'
 import imgSuzanne from '@/versionB/assets/team/suzanne.jpg'
 import imgAmanda from '@/versionB/assets/team/amanda.jpg'
 import imgLaura from '@/versionB/assets/team/laura.jpg'
@@ -133,6 +134,12 @@ export const team = [
     role: 'Integrated Media Buyer',
     img: imgMegan,
     bio: '',
+  },
+  {
+    name: 'Jeremy Hulyk',
+    role: 'Programmatic Specialist',
+    img: imgJeremy,
+    bio: 'Jeremy brings over six years of experience in programmatic advertising across a range of DSPs. He supports the execution and optimization of digital campaigns, with a focus on audience targeting, performance analysis, and continuous improvement to drive measurable results. Jeremy enjoys finding ways to connect campaign performance to real business outcomes. He is passionate about staying current with the evolving programmatic landscape and refining strategies to improve efficiency and scale. Outside of work, Jeremy enjoys coaching and playing soccer, spending time outdoors, and hanging out with his family and Australian Shepherd, Tellie.',
   },
   {
     name: 'Suzanne Racz',
