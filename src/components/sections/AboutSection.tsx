@@ -1,9 +1,7 @@
 import { CheckCircle2 } from 'lucide-react'
 
 const points = [
-  'Independent and senior — no junior hand-offs',
   'Channel-agnostic recommendations, always',
-  'Transparent fees and media costs',
   'Measurement built in from day one',
 ]
 
@@ -19,14 +17,14 @@ export default function AboutSection() {
             A senior team that treats your budget like our own.
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-navy/70">
-            Efficiency Media was built on a simple frustration: too many agencies
-            sell reach and call it strategy. We do the opposite. Every plan starts
-            with the outcome you need and works backward to the most efficient mix
-            of channels to get there.
+            Efficiency Media is built for agility — we eliminate the
+            administrative overhead that slows down larger agencies. Every plan
+            starts with the outcome you need and works backward to the most
+            efficient mix of channels to get there.
           </p>
           <p className="mt-4 leading-relaxed text-navy/70">
             The result is media that is accountable, transparent, and relentlessly
-            optimized — backed by two decades of buying relationships.
+            optimized — backed by decades of buying relationships.
           </p>
         </div>
 
